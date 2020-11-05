@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Calculator</title>
+	        <style>
+            .buttonContainer {
+                width: 148px;
+            }
+
+            .buttonContainer > .buttonClass {
+                width: 72px;
+                height: 48px;
+                font-size: 16px;
+            }
+        </style>
+</head>
+<body>
+	        <div id='btns' class='buttonContainer'>
+            <button id='btn1' class='buttonClass'>1</button>
+            <button id='btn2' class='buttonClass'>2</button>
+            <button id='btn3' class='buttonClass'>3</button>
+            <button id='btn4' class='buttonClass'>4</button>
+        </div>
+
+        <script>
+
+        	//too long
+            // document.getElementById('btn1').onclick = function() {
+            //     document.getElementById('btn1').innerHTML++;
+            // };
+
+            // document.getElementById('btn2').onclick = function() {
+            //     document.getElementById('btn2').innerHTML++;
+            // };
+            
+            // document.getElementById('btn3').onclick = function() {
+            //     document.getElementById('btn3').innerHTML++;
+            // };
+            
+            // document.getElementById('btn4').onclick = function() {
+            //     document.getElementById('btn4').innerHTML++;
+            // };
+
+
+            //shorter version
+                function action(e) {
+                /* Older IE browsers have a srcElement property,
+                but other browsers have a 'target' property; 
+                Set btn to whichever exists. */
+                var btn = e.target || e.srcElement;
+                
+                /* Get the clicked element's innerHTML */
+                document.getElementById(btn.id).innerHTML++;
+            }
+            
+            /* Set each button to call action(e) when clicked */
+            // document.getElementById('btn1').onclick = action;
+            // document.getElementById('btn2').onclick = action;
+            // document.getElementById('btn3').onclick = action;
+            // document.getElementById('btn4').onclick = action;
+
+
+            //alternative with click event listener
+            /* Add a click event listener that calls action(e) when clicked */
+            document.getElementById('btn1').addEventListener('click', action);
+            document.getElementById('btn2').addEventListener('click', action);
+            document.getElementById('btn3').addEventListener('click', action);
+            document.getElementById('btn4').addEventListener('click', action);
+
+
+        </script>
+</body>
+</html>
