@@ -104,3 +104,21 @@ result.innerHTML = categoriesUniqueArrayMitAll.map((category) => {
 }).join('')
 
  }
+
+ function restructureArray(){
+
+  console.log("Restructure Array:")
+
+  let first = 'Bob';
+  let second = "Waldemar";
+
+//const output1 = document.getElementById('output1');
+// const output2 = document.querySelector('#output2');
+  output1.innerHTML = [second, first];
+  console.log([second, first]);
+
+  //RESTRUCTURE
+  [second, first] = [first, second];
+  console.log([second, first]);
+  output2.innerHTML= [second, first];
+ }
