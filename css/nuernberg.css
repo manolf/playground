@@ -1,0 +1,371 @@
+/*
+VARIANTE 1
+*/
+
+/* #gallery {
+  border: none;
+  background: none;
+}
+
+#gallery img {
+  width: 100%;
+} */
+
+
+/*
+VARIANTE 2
+*/
+
+/* 
+#gallery {
+  width: 20em;
+  height: 15em;
+  margin: 0 auto;
+}
+
+  
+#gallery figure {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#gallery figcaption {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  color: white;
+}
+
+#gallery img {
+  width: 100%;
+  margin: 0;
+  padding: 0;  
+}
+
+
+@media (min-width: 40em)  { 
+#gallery {
+  width: 40em;
+  height: 30em;
+}
+}
+
+@media (max-width: 60em)  { 
+#gallery {
+  width: 60em;
+  height: 45em;
+}
+} */
+
+
+
+/*
+Variante 3 Animation mit Keyframes
+
+*/
+
+/* main{
+  padding: 0;
+}
+
+#gallery {
+  width: 20em;
+  height: 15em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+  
+#gallery figure {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#gallery figcaption {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  color: white;
+}
+
+#gallery img {
+  width: 100%;
+  margin: 0;
+  padding: 0;  
+} */
+
+/* animation */
+
+/* #gallery figure {
+  height: 100%;
+  animation: slide 18s infinite ease-in-out;
+}
+
+#gallery:hover figure {
+  animation-play-state: paused;
+} */
+
+/*für 6 Bilder */
+/* @keyframes slide {
+  0% {
+    top: 0
+  }
+  12% {
+    top: 0
+  }
+  16% {
+    top: -100%
+  }
+  28% {
+    top: -100%
+  }
+  32% {
+    top: -200%
+  }
+  44% {
+    top: -200%
+  }
+  48% {
+    top: -300%
+  }
+  60% {
+    top: -300%
+  }
+  65% {
+    top: -400%
+  }
+  78% {
+    top: -400%
+  }
+  83% {
+    top: -500%
+  }
+  95% {
+    top: -500%
+  }
+  100% {
+    top: 0
+  }
+} */
+
+/*für 3 Bilder */
+/* @keyframes slide {
+  0% {
+    top: 0
+  }
+  33% {
+    top: -100%
+  }
+  66% {
+    top: -200%
+  } 
+}
+
+
+@media (min-width: 40em)  { 
+#gallery {
+  width: 40em;
+  height: 30em;
+}
+}
+
+@media (max-width: 60em)  { 
+#gallery {
+  width: 100%;
+  height: 45em;
+}
+} */
+
+
+/*
+Variante 4: Image-Fader;
+
+*/
+/* #gallery {
+  position: relative;
+}
+
+#gallery figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#gallery figcaption {
+  position: absolute;
+  left: 1em;
+  bottom: 0.5em;
+  z-index: 2;
+  color: white;
+}
+ */
+
+/*animation 3 bilder*/
+/* #gallery figure {
+  animation: wechseln 15s infinite;
+}
+
+#gallery figure:nth-of-type(2) {
+  animation-delay: 5s;
+}
+#gallery figure:nth-of-type(3) {
+  animation-delay: 10s;
+}
+
+@keyframes wechseln {
+    0% {opacity: 0;}
+   20% {opacity: 1;}
+   40% {opacity: 1;}
+   60% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
+@media (min-width: 40em)  { 
+#gallery {
+  width: 40em;
+  height: 30em;
+}
+}
+
+@media (max-width: 60em)  { 
+#gallery {
+  width: 60em;
+  height: 45em;
+}
+} */
+
+/*
+Variante 5: Zoom;
+
+*/
+main {
+  background: transparent;
+  border-color: transparent;
+}
+
+#gallery {
+  position: relative;
+  background: none;
+  border: none;
+}
+
+#gallery figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#gallery figcaption {
+  position: absolute;
+  left: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  bottom: 0.5em;
+  color: white;
+}
+
+@-webkit-keyframes bilder {
+  0% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bilder {
+  0% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#gallery figure:nth-of-type(1) {
+  -webkit-animation: bilder 15s 7s infinite;
+  animation: bilder 15s 7s infinite;
+}
+
+#gallery figure:nth-of-type(2) {
+  -webkit-animation: bilder 15s 2s infinite;
+  animation: bilder 15s 2s infinite;
+}
+
+#gallery figure:nth-of-type(3) {
+  -webkit-animation: bilder 15s 12s infinite;
+  animation: bilder 15s 12s infinite;
+}
+
+@-webkit-keyframes wechseln {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+    z-index: 20;
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  34% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0, 0);
+  }
+}
+
+@keyframes wechseln {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+    z-index: 20;
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  34% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0, 0);
+  }
+}
+
+#gallery figure:nth-of-type(4) {
+  -webkit-animation: wechseln 15s 10s infinite;
+  animation: wechseln 15s 10s infinite;
+}
+
+#gallery figure:nth-of-type(5) {
+  -webkit-animation: wechseln 15s 5s infinite;
+  animation: wechseln 15s 5s infinite;
+}
+
+#gallery figure:nth-of-type(6) {
+  -webkit-animation: wechseln 15s infinite;
+  animation: wechseln 15s infinite;
+}

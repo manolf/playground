@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>timer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="timerTabCust.js"></script>
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 2%;
+      }
+
+      .wrapperTabata2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="text-center mt-4 mb-4">WorkoutTimer: Customizable</h2>
+
+
+
+    <hr />
+    <h2 class="text-center mt-4 mb-4">Tabata Timer</h2>
+
+
+    <div id="top" class="text-center mt-4 mb-4">
+      <form name="input" class="text-center d-flex justify-content-center" >
+        <div style="border: 1pt solid black; width: 450x; width: 450px; padding: 10px;" class="rounded">
+        <input type="text" id="rounds" style= "width:250px;" placeholder="How many rounds?" /> <br>
+        <input type="text" id="secondsAction" style= "width:250px;" placeholder="Action Intervall in Seconds" /><br>
+        <input type="text" id="secondsRest" style= "width:250px;" placeholder="Rest Interval in Seconds" />
+        <p id="error"></p>
+
+        <button id="button" onclick="return startGame()">Customize</button>
+        </div>
+
+      </form>
+
+  </div>
+
+    <div class="wrapperTabata text-center">
+      <div class="">
+        <button
+          class="btn btn-success font-weight-bold btn-lg  pl-4 pr-4 pt-3 pb-3 mr-2"
+          style="width:140px;"
+          onclick="return timerTabata();"
+        >
+          START
+        </button>
+
+        <button
+          class="btn btn-warning font-weight-bold btn-lg  pl-4 pr-4 pt-3 pb-3 mr-2"
+          style="width:140px;"
+          onclick="return stopTabataTimer();"
+        >
+          HOLD
+        </button>
+
+        <button
+          class="btn btn-secondary font-weight-bold btn-lg  pl-4 pr-4 pt-3 pb-3"
+          style="width:140px;"
+          onclick="return resetTabataTimer();"
+        >
+          RESET
+        </button>
+
+        <div
+          class="bg-dark text-light rounded mt-4 mx-auto text-center"
+          style="width: 450px; height: 50px; border: 1pt solid green"
+        >
+          <h2 id="screenTabata">Push START</h2>
+        </div>
+
+        <div
+          class="bg-secondary text-dark rounded mt-4 mx-auto text-center"
+          style="width: 450px; height: 200px;"
+        >
+          <h2 id="screenWod">DEIN WORKOUT <br>
+            Anzahl Runden: 8 <br>
+            Action: 20 Sekunden <br>
+            Rest: 10 Sekunden</h2>
+        </div>
+
+
+        <div
+          class="bg-dark text-light rounded mt-2 mx-auto text-center"
+          style="width: 450px; height: 50px; border: 1pt solid green"
+        >
+          <h2 id="clockTabata"></h2>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="wrapperTabata2">
+     
+      <!-- BEGIN -->
+      <!-- <div>
+        <button
+          class="btn btn-info font-weight-bold"
+          onclick="return countDownStart = setInterval(beginning, 1000);"
+        >
+          TABATA - Begin
+        </button>
+
+        <div
+          class="bg-dark text-light rounded mt-2 text-center"
+          style="width: 250px; height: 50px; border: 1pt solid green"
+        >
+          <h2 id="clockBegin">START in Seconds</h2>
+        </div>
+      </div> -->
+
+      <!-- ACTION -->
+      <!-- <div>
+        <button
+          class="btn btn-danger font-weight-bold"
+          onclick="return countDownAction = setInterval(action, 1000);"
+        >
+          TABATA-Action
+        </button>
+
+        <div
+          class="bg-dark text-light rounded mt-2 text-center"
+          style="width: 250px; height: 50px; border: 1pt solid green"
+        >
+          <h2 id="clockAction">ACTION</h2>
+        </div>
+      </div> -->
+
+      <!-- REST -->
+      <!-- <div>
+        <button
+          class="btn btn-success font-weight-bold"
+          onclick="return countDownRest = setInterval(rest, 1000);"
+        >
+          TABATA-Rest
+        </button>
+
+        <div
+          class="bg-dark text-light rounded mt-2 text-center"
+          style="width: 250px; height: 50px; border: 1pt solid green"
+        >
+          <h2 id="clockRest">REST</h2>
+        </div>
+      </div>
+    </div> -->
+
+    <hr />
+  </body>
+</html>

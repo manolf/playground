@@ -1,0 +1,312 @@
+/*
+============================ 
+Kästchen 24 - Animation
+============================ 
+*/
+
+.twentyfour {
+  background-color: #9ed2ec;
+  margin: 0;
+  padding: 0;
+}
+
+.snow {
+  background-color: white;
+  height: 50px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+
+.snowfall {
+  background: url(img/snow_klein.png);
+  background-color: #9ed2ec;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: repeat;
+  animation: snow 1.6s linear infinite;
+  animation: snow 2.6s linear infinite;
+  position: relative;
+}
+@keyframes snow {
+  0% {
+    background-position: 0 0;
+  }
+  20% {
+    background-position: 50px 50px;
+  }
+  40% {
+    background-position: 100px 100px;
+  }
+  60% {
+    background-position: 150px 150px;
+  }
+  80% {
+    background-position: 200px 200px;
+  }
+  100% {
+    background-position: 250px 250px;
+  }
+}
+
+/* header  */
+#playground {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  animation: 2s 1 slidein;
+  color: white;
+  font-size: 88px;
+  position: absolute;
+  top: 100px;
+  left: 25%;
+}
+
+#playground:hover {
+  color: red;
+}
+
+#playground2 {
+  display: none;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 500%;
+  }
+
+  75% {
+    font-size: 600%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* animation gallery*/
+#gallery {
+  position: relative;
+}
+
+#hanno24 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  animation: 20s appear;
+  animation-fill-mode: forwards;
+  width: 425px;
+  height: 829px;
+}
+
+#rudolfo {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  animation: 4s appear;
+  width: 746px;
+  height: 480px;
+  margin-bottom: 4px;
+}
+
+#elftree {
+  position: absolute;
+  top: 340px;
+  left: 30%;
+  width: 592px;
+  height: 459px;
+  animation: 16s appear;
+}
+
+#danke {
+  position: absolute;
+  top: 500px;
+  left: 70%;
+  width: 283px;
+  height: 210px;
+  margin-top: 4px;
+  animation: 34s appear;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideabit {
+  0% {
+    left: 5%;
+  }
+
+  100% {
+    left: 15%;
+  }
+}
+
+/*
+=============== 
+MEDIA QUERIES
+===============
+*/
+
+/***************************** 
+  Kästchen 24
+  ******************************/
+@media (max-width: 500px) {
+  #playground2 {
+    display: block;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    animation: 2s 1 slidein;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 0px;
+    left: 30%;
+  }
+
+  #playground2:hover {
+    color: red;
+  }
+
+  #playground {
+    display: none;
+  }
+
+  #hanno24 {
+    width: 360px;
+    height: 701px;
+    position: absolute;
+    top: 570px;
+    left: 0;
+  }
+
+  #rudolfo {
+    width: 360px;
+    height: 232px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+
+  #elftree {
+    width: 360px;
+    height: 280px;
+    position: absolute;
+    top: 290px;
+    left: 0;
+  }
+
+  #danke {
+    width: 360px;
+    height: 266px;
+    position: absolute;
+    top: 1300px;
+    left: 0;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  #playground2 {
+    display: block;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    animation: 2s 1 slidein;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 0px;
+    left: 30%;
+  }
+
+  #playground2:hover {
+    color: red;
+  }
+
+  #playground {
+    display: none;
+  }
+
+  #hanno24 {
+    width: 283px;
+    height: 552px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
+
+  #rudolfo {
+    width: 360px;
+    height: 232px;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+  }
+
+  #elftree {
+    width: 360px;
+    height: 280px;
+    position: absolute;
+    top: 290px;
+    left: 30%;
+  }
+
+  #danke {
+    width: 212px;
+    height: 157px;
+    position: absolute;
+    top: 390px;
+    left: 70%;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1500px) {
+  #hanno24 {
+    width: 283px;
+    height: 552px;
+    left: 5%;
+  }
+
+  #rudolfo {
+    width: 466px;
+    height: 300px;
+  }
+
+  #elftree {
+    width: 370px;
+    height: 287px;
+    top: 260px;
+    left: 35%;
+  }
+
+  #playground {
+    font-size: 40px;
+    left: 35%;
+  }
+
+  #danke {
+    top: 320px;
+    left: 70%;
+    width: 243px;
+    height: 180px;
+  }
+}
