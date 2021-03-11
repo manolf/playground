@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar Demo</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+    <nav class="navbar">
+      <span id="toggle-nav" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+    </span>
+        <ul id="navlist">
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+        </ul>
+
+    </nav>
+
+    <!-- https://www.webdesignvista.com/create-responsive-navbar-without-bootstrap/ -->
+
+    <script>
+
+        var nav = document.getElementById('navlist');
+
+        function toggleNav () {
+
+            if ( nav.style.display === "" )
+            nav.style.display = "block";
+
+            else
+            nav.style.display = "";
+        }
+
+
+        function windowResizeHandler () {
+            if ( screen.width > 500 )
+            nav.style.display = "";
+        }
+
+        window.addEventListener("resize", windowResizeHandler);
+
+    </script>
+</body>
+
+
+
+</html>

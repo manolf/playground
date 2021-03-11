@@ -1,0 +1,47 @@
+body {
+         padding: 0;
+         margin: 0;
+ }
+
+ .navbar {
+        position: relative;
+        background: black;
+}
+
+#navlist {
+       list-style: none;
+       display: flex;
+       padding: 0;
+       margin: 0;
+       background: black;
+}
+
+#navlist li {
+      flex: auto;
+      text-align: center;
+      padding: 1.6em;
+      font-size: 18px;
+      color: white;
+}
+
+#navlist li:hover {
+     background: red;
+}
+
+@media all and ( max-width: 500px ) {
+
+    .navbar {
+         padding: 1.6em;
+    }
+
+    #navlist {
+         flex-direction: column;
+         display: none;
+    }
+
+    #toggle-nav {
+      display: block;
+      color: white;
+  }
+
+}
